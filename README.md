@@ -4,6 +4,15 @@ When you are writing a one-shot CLI that executes a single function and then ter
 
 ## Guidelines
 
+### TLDR
+
+|                      | Typescript          | Go            | Python             | C#                 |
+|----------------------|---------------------|---------------|--------------------|--------------------|
+| Logging              | winston             | slog          | python-json-logger | Serilog            |
+| CLI Argument Parsing | Commander           | flag          | argparse           | System.Commandline |
+| JSON Parsing         | JSON.parse with Zod | encoding/json | pydantic           | System.Text.Json   |
+
+
 ### Development/Documentation
 
 Make it easy for developers unfamiliar with this CLI to run and debug this code
@@ -69,7 +78,8 @@ Make it easy for developers unfamiliar with this CLI to run and debug this code
 ## Go Guidelines
 
 * If possible, use the built-in structured logger from the standard library (slog), otherwise use logrus
-* Use encoding/json to deserialize and serialize JSON
+* Use `encoding/json` to deserialize and serialize JSON
+* Use `flag` to parse command line arguments
 
 ## Typescript Guidelines
 
