@@ -6,11 +6,12 @@ When you are writing a one-shot CLI that executes a single function and then ter
 
 ### TLDR
 
-|                      | Typescript          | Go            | Python             | C#                 |
-|----------------------|---------------------|---------------|--------------------|--------------------|
-| Logging              | winston             | slog          | python-json-logger | Serilog            |
-| CLI Argument Parsing | Commander           | flag          | argparse           | System.Commandline |
-| JSON Parsing         | JSON.parse with Zod | encoding/json | pydantic           | System.Text.Json   |
+|                      | Typescript     | Go                     | Python             | C#                 |
+|----------------------|----------------|------------------------|--------------------|--------------------|
+| Logging              | winston        | slog                   | python-json-logger | Serilog            |
+| CLI Argument Parsing | Commander      | flag                   | argparse           | System.Commandline |
+| JSON Parsing         | JSON.parse/Zod | encoding/json          | pydantic           | System.Text.Json   |
+| Tracing              | dd-trace       | DataDog/dd-trace-go.v1 | ddtrace            | Datadog.Trace      |
 
 
 ### Development/Documentation
