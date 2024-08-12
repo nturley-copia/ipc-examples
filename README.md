@@ -4,7 +4,7 @@ When you are writing a one-shot CLI that executes a single function and then ter
 
 ## Guidelines
 
-### TLDR
+### Recommended Libraries
 
 |                      | Typescript     | Go                     | Python             | C#                 |
 |----------------------|----------------|------------------------|--------------------|--------------------|
@@ -70,27 +70,18 @@ Make it easy for developers unfamiliar with this CLI to run and debug this code
 
 ## C# Guidelines
 
-* Use as modern of .NET like .NET 8.0. Try to stay away from .NET Framework if possible.
+* Use as modern of .NET like .NET 8.0 or newer. Try to stay away from .NET Framework if possible.
 * Avoid relying on Visual Studio, make it buildable from the `dotnet` CLI
-* Serilog for logging
-* Parse JSON with `System.Text.Json`, if you have to use an old version of .NET, then use the NewtonSoft JSON library
-* System.Commandline for parsing arguments
 
 ## Go Guidelines
 
-* If possible, use the built-in structured logger from the standard library (slog), otherwise use logrus
-* Use `encoding/json` to deserialize and serialize JSON
-* Use `flag` to parse command line arguments
+* If you can't use slog, use logrus
 
 ## Typescript Guidelines
 
-* Winston for logging
-  * Use the AsyncLocalStorage API to attach trace ids and span ids to all log statements in a code block
-* Commander for argument parsing
-* Use JSON.parse and zod for JSON parsing and validation
+ * Use the AsyncLocalStorage API to attach trace ids and span ids to all log statements in a code block
+ 
 
 ## Python Guidelines
+
 * Poetry for virtual environment management
-* argparse for command line argument parsing
-* python-json-logger for JSON formatted logs
-* pydantic for parsing and validating JSON
