@@ -74,7 +74,9 @@ Make it easy for developers unfamiliar with this CLI to run and debug this code
 ## Typescript Guidelines
 
 * Winston for logging
+  * Use the AsyncLocalStorage API to attach trace ids and span ids to all log statements in a code block
 * Commander for argument parsing
+* Use JSON.parse and zod for JSON parsing and validation
 
 ## Python Guidelines
 * Poetry for virtual environment management
