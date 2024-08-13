@@ -17,8 +17,16 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: install deps
-      run: npm ci
-      
-    - name: run the application
-      run: npm start < test_input.txt
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v1
+      with:
+          python-version: 3.11
+    
+    - name: Install poetry
+      run: pip install poetry -g
+    
+    - name: Install dependencies
+      run: poetry install
+    
+    - name: Test the application
+      run: poetry run python main.py < test_input.txt
