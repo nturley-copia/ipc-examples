@@ -22,8 +22,8 @@ jobs:
       with:
           python-version: 3.11
     
-    - name: Install poetry
-      run: pip install poetry -g
+    - name: Install Poetry
+      uses: dschep/install-poetry-action@v1.2
     
     - name: Install dependencies
       run: poetry install
