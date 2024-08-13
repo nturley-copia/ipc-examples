@@ -21,4 +21,4 @@ jobs:
       run: npm ci
       
     - name: run the application
-      run: npm start
+      run: npm start < test_input.txt

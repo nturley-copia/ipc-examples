@@ -1,4 +1,4 @@
-name: Go
+name: Python
 
 on:
   push:
@@ -10,15 +10,15 @@ jobs:
     runs-on: windows-latest
     defaults:
       run:
-        working-directory: ./proc2
+        working-directory: ./proc4
     steps:
     - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
-    - name: build the application
-      run: go build
-    
-    - name: Test the application
-      run: go run . < test_input.txt
+    - name: install deps
+      run: npm ci
+      
+    - name: run the application
+      run: npm start < test_input.txt

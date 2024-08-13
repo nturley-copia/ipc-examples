@@ -30,3 +30,6 @@ jobs:
 
     - name: build the application
       run: dotnet build -c ${{ matrix.configuration }}
+
+    - name: Test the application
+      run: dotnet run < test_input.txt
